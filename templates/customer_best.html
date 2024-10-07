@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Top 10 Customers</h1>
+<ul class="list-group">
+    {% for customer in customers %}
+    <li class="list-group-item">
+        {{ customer.firstName }} {{ customer.lastName }} - {{ customer.numReservations }} reservations
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
